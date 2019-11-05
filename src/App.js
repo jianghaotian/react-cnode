@@ -11,7 +11,7 @@ import User from './container/User';
 export default class App extends Component {
     render() {
         return (
-            <Router basename="react-cnode">
+            <Router>
                 <Navbar/>
                 <div id='main'>
                     <Sidebar/>
