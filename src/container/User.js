@@ -61,22 +61,22 @@ export default class User extends Component {
                             } else {
                                 return (
                                     <div class='cell' key={index}>
-                                        <a class="user_avatar pull-left" href="/user/atian25">
+                                        <Link class="user_avatar pull-left" to={`/user/${item.author.loginname}`}>
                                             <img src={item.author.avatar_url} title={item.author.loginname}/>
-                                        </a>
+                                        </Link>
                                         <span class="reply_count pull-left">
                                             <span class="count_of_replies" title="回复数"> 2 </span>
                                             <span class="count_seperator"> / </span>
                                             <span class="count_of_visits" title='点击数'> 2599 </span>
                                         </span>
-                                        <a class='last_time pull-right' href="/topic/5cc7a5b105ae566f637fdb7c#5cc7ae24a86ae80ce64b5917">
+                                        <a class='last_time pull-right'>
                                             <img class="user_small_avatar" src="https://avatars0.githubusercontent.com/u/11203929?v=4&amp;s=120"/>
                                             <span class="last_active_time">6 个月前</span>
                                         </a>
                                         <div class="topic_title_wrapper">
-                                            <a class='topic_title' href={`/topic/${item.id}`} title={item.title}>
+                                            <Link class='topic_title' to={`/topic/${item.id}`} title={item.title}>
                                                 {item.title}
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 )
@@ -84,7 +84,7 @@ export default class User extends Component {
                         })
                     }
                     <div class='cell more'>
-                        <a class='dark' href="/user/atian25/topics">查看更多»</a>
+                        <a class='dark'>查看更多»</a>
                     </div>
                 </div>
 
@@ -99,22 +99,22 @@ export default class User extends Component {
                             } else {
                                 return (
                                     <div class='cell' key={index}>
-                                        <a class="user_avatar pull-left" href={`/user/${item.author.loginname}`}>
+                                        <Link class="user_avatar pull-left" to={`/user/${item.author.loginname}`}>
                                             <img src={item.author.avatar_url} title={item.author.loginname}/>
-                                        </a>
+                                        </Link>
                                         <span class="reply_count pull-left">
                                             <span class="count_of_replies" title="回复数"> 1 </span>
                                             <span class="count_seperator"> / </span>
                                             <span class="count_of_visits" title='点击数'> 571 </span>
                                         </span>
-                                        <a class='last_time pull-right' href="/topic/5dbbaf25865a9844a301f3bd#5dbbcdd9ece3813ad9ba5b34">
+                                        <a class='last_time pull-right'>
                                             <img class="user_small_avatar" src="https://avatars0.githubusercontent.com/u/11203929?v=4&amp;s=120"/>
                                             <span class="last_active_time">1 天前</span>
                                         </a>
                                         <div class="topic_title_wrapper">
-                                            <a class='topic_title' href={`/topic/${item.id}`} title={item.title}>
+                                            <Link class='topic_title' to={`/topic/${item.id}`} title={item.title}>
                                             {item.title}
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 )
@@ -122,16 +122,9 @@ export default class User extends Component {
                         })
                     }
                     <div class='cell more'>
-                        <a class='dark' href="/user/atian25/topics">查看更多»</a>
+                        <a class='dark'>查看更多»</a>
                     </div>
-                    
-
-
                 </div>
-
-
-
-
             </div>
         )
     }

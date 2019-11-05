@@ -25,9 +25,9 @@ export default class Navbar extends Component {
             <div className='navbar'>
                 <div className='navbar-inner'>
                     <div className='container'>
-                        <a className='brand' href='/'>
+                        <Link className='brand' to='/'>
                             <img src="//static2.cnodejs.org/public/images/cnodejs_light.svg" />
-                        </a>
+                        </Link>
                         <form id='search_form' className='navbar-search' action="/search">
                             <input type='text' id='q' name='q' className='search-query span3' value=''/>
                         </form>
