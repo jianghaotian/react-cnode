@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
+import {HashRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Home from './container/Home';
@@ -11,7 +11,7 @@ import User from './container/User';
 export default class App extends Component {
     render() {
         return (
-            <Router>
+            <Router basename="react-cnode">
                 <Navbar/>
                 <div id='main'>
                     <Sidebar/>
